@@ -1,5 +1,7 @@
 # grpc-promise-meta
 
+This module is an extension of the original grpc-promise with the added support for passing Metadata objects for the grpc resolver.
+
 ## Table of contents
 
 - [What's gRPC](#what-s-grpc)
@@ -30,7 +32,6 @@ High performance, open source, general-purpose RPC framework.
 - *Bidirectional Stream Request:* One **Duplex stream** for request and response
 
 ## Introduction to grpc-promise-meta 
-This module is an extension of the original grpc-promise with the added support for passing Metadata objects for the grpc resolver.
 
 GRPC promisify module for all Request/Response types: standard and stream.
 
