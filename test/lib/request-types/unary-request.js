@@ -1,10 +1,12 @@
 const grpc_promise = require('../../../lib/index');
+// eslint-disable-next-line no-unused-vars
+const should = require('should');
 
 describe('Unary Request', function () {
 
   it('Test ok', function () {
     const client = {};
-    const makeUnaryRequest = function (request, callback) {
+    const makeUnaryRequest = function (request, metadata, callback) {
       callback(null, request);
     };
     makeUnaryRequest.requestStream = false;
@@ -12,7 +14,6 @@ describe('Unary Request', function () {
     Object.setPrototypeOf(client, {
       unaryReq: makeUnaryRequest
     });
-
     grpc_promise.promisifyAll(client);
 
     return client.unaryReq()
@@ -22,7 +23,7 @@ describe('Unary Request', function () {
 
   it('Test ko', function () {
     const client = {};
-    const makeUnaryRequest = function (request, callback) {
+    const makeUnaryRequest = function (request, metadata, callback) {
       callback('timeout');
     };
     makeUnaryRequest.requestStream = false;

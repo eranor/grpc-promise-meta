@@ -50,6 +50,6 @@ main = function () {
 
   server.bind('0.0.0.0:50052', grpc.ServerCredentials.createInsecure());
   server.start();
-}
+};
 
 main();

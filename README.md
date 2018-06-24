@@ -1,15 +1,9 @@
-# grpc-promise
-
-[![Build Status](https://travis-ci.org/carlessistare/grpc-promise.svg?branch=master)](https://travis-ci.org/carlessistare/grpc-promise)
-[![Coverage Status](https://coveralls.io/repos/github/carlessistare/grpc-promise/badge.svg?branch=master)](https://coveralls.io/github/carlessistare/grpc-promise?branch=master)
-
-[![NPM](https://nodei.co/npm/grpc-promise.png)](https://nodei.co/npm/grpc-promise/)
-[![NPM](https://nodei.co/npm-dl/grpc-promise.png?height=3)](https://nodei.co/npm/grpc-promise/)
+# grpc-promise-meta
 
 ## Table of contents
 
 - [What's gRPC](#what-s-grpc)
-- [Introduction to grpc-promise](#introduction-to-grpc-promise)
+- [Introduction to grpc-promise-meta](#introduction-to-grpc-promise-meta)
 - [Installation](#installation)
 - [API by example](#api-by-example)
   - [Proto example file](#proto-example-file)
@@ -35,7 +29,8 @@ High performance, open source, general-purpose RPC framework.
 - *Server Stream Request:* One **single** message request, one **Readable stream** message response
 - *Bidirectional Stream Request:* One **Duplex stream** for request and response
 
-## Introduction to grpc-promise 
+## Introduction to grpc-promise-meta 
+This module is an extension of the original grpc-promise with the added support for passing Metadata objects for the grpc resolver.
 
 GRPC promisify module for all Request/Response types: standard and stream.
 
@@ -50,7 +45,7 @@ The goal of **grpc-promise** is to standardize all kind of calls, whatever they 
 ## Installation
 
 ```bash
-$ npm install grpc-promise
+$ npm install grpc-promise-meta
 ```
 
 ## API by example
@@ -123,7 +118,7 @@ main();
 Client side:
 ```js
 const grpc = require('grpc');
-const grpc_promise = require('grpc-promise');
+const grpc_promise = require('grpc-promise-meta');
 const test_proto = grpc.load(__dirname + '/protobuf/test.proto').test;
 
 function main() {
@@ -179,7 +174,7 @@ main();
 Client side:
 ```js
 const grpc = require('grpc');
-const grpc_promise = require('grpc-promise');
+const grpc_promise = require('grpc-promise-meta');
 const test_proto = grpc.load(__dirname + '/protobuf/test.proto').test;
 
 function main() {
@@ -234,7 +229,7 @@ main();
 Client side:
 ```js
 const grpc = require('grpc');
-const grpc_promise = require('grpc-promise');
+const grpc_promise = require('grpc-promise-meta');
 const test_proto = grpc.load(__dirname + '/protobuf/test.proto').test;
 
 function main() {
@@ -297,7 +292,7 @@ main();
 Client side:
 ```js
 const grpc = require('grpc');
-const grpc_promise = require('grpc-promise');
+const grpc_promise = require('grpc-promise-meta');
 const test_proto = grpc.load(__dirname + '/protobuf/test.proto').test;
 
 function main() {

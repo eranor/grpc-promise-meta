@@ -1,6 +1,9 @@
 const BidiStreamMock = require('../../tools/grpc-mock/BidiStreamMock');
 const grpc_promise = require('../../../lib/index');
 
+// eslint-disable-next-line no-unused-vars
+const should = require('should');
+
 describe('Bidi Stream Request', function () {
 
   it('If no delay, test ok', function () {

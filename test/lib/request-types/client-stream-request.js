@@ -1,5 +1,7 @@
 const ClientStreamMock = require('../../tools/grpc-mock/ClientStreamMock');
 const grpc_promise = require('../../../lib/index');
+// eslint-disable-next-line no-unused-vars
+const should = require('should');
 
 describe('Client Stream Request', function () {
 
